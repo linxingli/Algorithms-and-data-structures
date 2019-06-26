@@ -1,9 +1,13 @@
-(function () {
+// 使用沙盒的优势：
+// 这种做法可以减少闭包占用的内存问题，因为没有指向匿名函数的引用。
+// 只要函数执行完毕，就可以立即销毁其作用域链了。
+(function (window) {
 
   /**
    * 链表
    */
   function LinkedList() {
+    
     var Node = function (element) { // {1}
       this.element = element
       this.next = null
@@ -119,4 +123,5 @@
 
   }
 
-})()
+  window.LinkedList = LinkedList
+})(window)
