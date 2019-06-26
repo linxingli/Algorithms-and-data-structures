@@ -4,7 +4,7 @@
 (function (window) {
 
   /**
-   * 链表
+   * 链表结构
    */
   function LinkedList() {
     
