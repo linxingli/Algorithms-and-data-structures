@@ -7,11 +7,13 @@
     arr[nextIndex] = temp
   }
   var length = arr.length,
-      minIndex
-      
+      minIndex,
+      count = 0
+
   for(var i = 0; i < length - 1; i++) {
     minIndex = i
     for(var j = i; j < length; j++) {
+      count ++
       if (arr[minIndex] > arr[j]) {
         minIndex = j
       }
@@ -22,5 +24,6 @@
   }
 
   console.log(arr);
+  console.log(count);
   
 })()
